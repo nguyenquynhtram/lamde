@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main(){
+	int n,x,a[101],i,cnt = 0;
+	
+	printf("nhap vao so so nguyen cua day: ");
+	scanf("%d",&n);
+	
+	printf("nhap vao day so nguyen: ");
+	for(i = 0;i < n;i++){
+		scanf("%d",&a[i]);
+	}
+	
+	printf("nhap vao so nguyen x: ");
+	scanf("%d",&x);
+	
+	for(i = 0;i < n;i++){
+		if(a[i] == x){
+			cnt += 1;
+		}
+	}
+	
+	if(cnt == 0){
+		printf("Trong day so nguyen tren khong co so %d",x);
+	}
+	else{
+		printf("Trong day so nguyen tren co so %d va so lan xuat hien cua %d la: %d",x,x,cnt);
+	}
+}
